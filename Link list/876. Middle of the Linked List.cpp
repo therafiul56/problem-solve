@@ -2,6 +2,11 @@
 using namespace std;
 
 int main() {
+    while (true) {
+        char c;
+        cin >> c;
+        if(c == '=') break;
+    }
     vector <int> v;
     while(true) {
         char c;
@@ -24,6 +29,15 @@ int main() {
 	   }
 	   cout << "]";
 	}
+	else {
+	    int p=((s/2));
+	   cout << "[" << *next(l.begin(),p) ;
+	   for (int i=p+1 ; i<s ; i++) {
+	       cout << "," << *next(l.begin(),i) ;
+	   }
+	   cout << "]";
+	}
 	
+	return 0;
 
 }
