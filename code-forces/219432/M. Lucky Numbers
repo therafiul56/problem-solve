@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+bool chek(int a){
+    
+    while(a>0){
+        
+        if(a%10!=4 && a%10!=7){
+            return false;
+        }
+        a/=10;
+    }
+    return true;
+}
+
+int main() {
+    int a , b; cin >> a >> b;
+    vector<int> v;
+    for(int i = a ; i<=b ; i++){
+        if(chek(i)){
+            v.push_back(i);
+        }
+        // cout << i << " ";
+    }
+    if(!v.empty()){
+        for(int k : v){
+            cout << k << " ";
+        }
+    }
+    else cout << -1;
+    return 0;
+
+}
